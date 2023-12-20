@@ -1,0 +1,21 @@
+#分式化簡 : 輸入分式的分子及分母(分母不可為0)，將其化簡後的分式輸出，數字範圍：整數1 – 10000
+#意思是有兩個數字10/15要化簡成2/3
+
+a, b = list(map(int, input().split() )) #讀一串數字進來
+
+def gcd(a, b): #寫出最大公因數的函式
+	if a==0: return b #b是答案
+	if b==0: return a #a是答案
+	return gcd(b, a%b)
+	
+ans = gcd(a,b) #算出最大公因數
+print( a//ans, b//ans ) #把結果印出來
+       
+ 
+         
+ 
+  
+ 
+  
+ 
+   
